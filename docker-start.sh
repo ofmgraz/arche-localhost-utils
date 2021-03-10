@@ -1,6 +1,6 @@
 #!/bin/bash
+source "`dirname $0`/volumesdir.sh"
 cd "`dirname $0`"
-source volumesdir.sh
 INIT_LOG="$VOLUMES_DIR/log/initScripts.log"
 
 if [ "`docker ps | grep " acdh-repo$" | wc -l`" == "1" ] ; then
