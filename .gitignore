@@ -1,3 +1,10 @@
 arche-ingest
 repo
 /.env
+vendor
+gui
+data
+custom_config
+tmp
+log
+postgresql
