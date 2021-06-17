@@ -4,7 +4,7 @@ repo
 vendor
 gui
 data
-custom_config
 tmp
 log
 postgresql
+config
