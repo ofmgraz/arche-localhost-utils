@@ -1,4 +1,4 @@
- login: username
+- login: username
   password: password
   groups:
   - admin

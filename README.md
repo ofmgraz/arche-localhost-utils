@@ -13,3 +13,7 @@ A bunch of shell scripts to ease working with arche locally
         * If you edit `pathBase` and `urlBase` in the config by hand, remember they have to **exactly** match the repository URL (especially `http://127.0.0.1` doesn't exactly match `http://localhost`).
 * To remove all data run `./reset-repo.sh`
 
+
+## enter a running container
+
+`docker exec -ti -u www-data acdh-repo bash`
