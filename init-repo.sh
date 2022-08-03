@@ -8,4 +8,5 @@ cp custom_config/dissServices.ttl "$VOLUMES_DIR/config/initScripts/dissServices.
 for i in data tmp postgresql log vendor gui; do
     mkdir -p "$VOLUMES_DIR/$i"
 done
+unzip dump.zip -d ${VOLUMES_DIR}/data
 
