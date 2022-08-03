@@ -9,4 +9,5 @@ for i in data tmp postgresql log vendor gui; do
     mkdir -p "$VOLUMES_DIR/$i"
 done
 unzip dump.zip -d ${VOLUMES_DIR}/data
+chmod -x ${VOLUMES_DIR}/config/initScripts/40-updateVocabularies.php
 
