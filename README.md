@@ -7,7 +7,7 @@ A bunch of shell scripts to ease working with arche locally
 * Clone the repo
 * One time: run `./init-repo.sh` to create needed directories 
 * To (re)start the continer run `./docker-start.sh`
-    *  ~~Be aware full repository initialization at the first run (particularly external vocabularies import) may take a lot of time. Anyway once `# Running 40-updateVocabularies.php` initialization stage is reached you may safely start using the repository without further waiting. ~~
+    * ~~Be aware full repository initialization at the first run (particularly external vocabularies import) may take a lot of time. Anyway once `# Running 40-updateVocabularies.php` initialization stage is reached you may safely start using the repository without further waiting.~~
     * This repo ships with a database dump to skip avoid initial download of external vocabulaires
     * To stop the container run `docker container stop acdh-repo`
 * To remove all data run `./reset-repo.sh`
