@@ -22,3 +22,8 @@ A bunch of shell scripts to ease working with arche locally
 ## enter a running container
 
 `docker exec -it -u www-data acdh-repo bash`
+
+
+## local PHP setup
+
+information about the needed PHP setup to run ingestions and file checks can be found [here](https://github.com/acdh-oeaw/arche-ingest?tab=readme-ov-file#installation--usage)
