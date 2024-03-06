@@ -35,6 +35,19 @@ information about the needed PHP setup to run ingestions and file checks can be 
 ## how to test
 
 * change into `testing` folder `cd testing` 
-* run `./ingest_test.sh` to ingest the ["Die eierlegende Wollmilchsau"](https://github.com/acdh-oeaw/arche-ingest/blob/master/sample.ttl)
 
-## filechecker
+### ingest metadata
+
+* run `./metadata_ingest.sh` to ingest the ["Die eierlegende Wollmilchsau"](https://github.com/acdh-oeaw/arche-ingest/blob/master/sample.ttl)
+* see [arche-ingest](https://github.com/acdh-oeaw/arche-ingest) for some documentation
+
+### run filechecker
+ * run `./filechecker.sh`
+ * check the results in `testing/fc_out/{datetime-of-last-run}` (e.g. cd into the directory, start python dev server `python -m http.server` and open the printed URL)
+ * spoileralert: 2/3 files did not pass the test!
+
+### ingest binaries
+* (well you actually shouldn't do that, because they didn't pass the filechecker)
+* run `./binaries_import.sh`
+* see [repo-file-checker](https://github.com/acdh-oeaw/repo-file-checker) for some documentation
+
