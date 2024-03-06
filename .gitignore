@@ -10,3 +10,4 @@ postgresql
 config
 testing/composer.json
 testing/composer.lock
+testing/fc_out

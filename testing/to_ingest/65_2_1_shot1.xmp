@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rti="http://culturalheritageimaging.org/resources/ns/rti/1.0#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+  <rdf:Description rdf:about="">
+    <xmp:CreatorTool>http://culturalheritageimaging.org/resources/tools/RTIViewer/1.1.0</xmp:CreatorTool>
+    <xmp:CreateDate>2020-06-03T21:35:30</xmp:CreateDate>
+    <rti:RTIImage rdf:parseType="Resource">
+      <dc:source>/Users/adesouza/Desktop/EGYPTOLOGY/**DATA/SJE_Site65/SJE65_RTI/SJE_65_2_1_ext/finished-files/SJE_65_2_1_cropped_4982.rti</dc:source>
+      <dc:format>image/x-rti-rti-hsh</dc:format>
+      <rti:Size>
+        <stDim:w>4982</stDim:w>
+        <stDim:h>3402</stDim:h>
+        <stDim:unit>pixel</stDim:unit>
+      </rti:Size>
+    </rti:RTIImage>
+    <rti:Snapshot>
+      <dc:Identifier>uuid:08a90707-c71f-4bf5-a3f2-0d7c4ab4886c</dc:Identifier>
+      <rti:Size>
+        <stDim:w>2011.4</stDim:w>
+        <stDim:h>1667.56</stDim:h>
+        <stDim:unit>pixel</stDim:unit>
+      </rti:Size>
+      <rti:RenderingInfo rdf:parseType="Resource">
+        <rti:Zoom>50.3131</rti:Zoom>
+        <rti:Pan rdf:parseType="Resource">
+          <rti:x>1166</rti:x>
+          <rti:y>1734.44</rti:y>
+        </rti:Pan>
+        <rti:Incidence rdf:parseType="Resource">
+          <rti:x>-0.561051</rti:x>
+          <rti:y>-0.827781</rti:y>
+        </rti:Incidence>
+        <rti:RenderingMode rdf:parseType="Resource">
+          <!--0=DEFAULT,
+1=DIFFUSE_GAIN,
+2=SPECULAR_ENHANCEMENT,
+3=NORMAL_ENHANCEMENT,
+4=UNSHARP_MASKING_IMG,
+5=UNSHARP_MASKING_LUM,
+6=COEFF_ENHANCEMENT,
+7=DETAIL_ENHANCEMENT,
+8=DYN_DETAIL_ENHANCEMENT
+9=NORMALS_VISUALIZATION-->
+          <rti:RenderingModeID>2</rti:RenderingModeID>
+          <rti:Parameters>
+            <rdf:Bag>
+              <rdf:li>
+                <rti:Parameter value="3" name="diffuseColor"/>
+              </rdf:li>
+              <rdf:li>
+                <rti:Parameter value="70" name="specularity"/>
+              </rdf:li>
+              <rdf:li>
+                <rti:Parameter value="126" name="highlightSize"/>
+              </rdf:li>
+            </rdf:Bag>
+          </rti:Parameters>
+        </rti:RenderingMode>
+      </rti:RenderingInfo>
+    </rti:Snapshot>
+  </rdf:Description>
+</rdf:RDF>
