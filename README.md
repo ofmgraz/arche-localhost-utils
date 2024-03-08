@@ -57,7 +57,7 @@ for the following steps make sure you are in the `testing` directory (`cd testin
 ### run filechecker
 #### docker setup
 * first create and enter a php/arche container by running `./enter_php_container.sh`
-* now you should be inside the container and the current working directory should be mounted into `data`, so if you change directory in data (`cd data`) and type `ls` you should see the files from the host `testing` folder
+* you are now in the mounted `testing` directory (which inside the docker is called `data`); if you look around (`ls`) you should see the same files as in the host`s testing repo.
 * run `./filechecker.sh`
 * check the results in `testing/fc_out/{datetime-of-last-run}` (e.g. cd into the directory, start python dev server `python -m http.server` and open the printed URL)
 * spoileralert: 2/3 files did not pass the test!
@@ -70,7 +70,7 @@ for the following steps make sure you are in the `testing` directory (`cd testin
 ### ingest binaries
 #### docker setup
 * first create and enter a php/arche container by running `./enter_php_container.sh`
-* now you should be inside the container and the current working directory should be mounted into `data`, so if you change directory in data (`cd data`) and type `ls` you should see the files from the host `testing` folder
+* you are now in the mounted `testing` directory (which inside the docker is called `data`); if you look around (`ls`) you should see the same files as in the host`s testing repo.
 * run `./binaries_import.sh`
 
 #### composer setup
