@@ -9,4 +9,5 @@ rest:
 doorkeeper:
     epicPid:
         pswd:
-    checkRanges: {}
+    checkRanges:
+        foo: []
