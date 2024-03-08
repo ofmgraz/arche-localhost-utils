@@ -22,6 +22,7 @@ on default you can execute docker related commands only with `sudo`; to change t
 ## enter a running container
 
 `docker exec -it -u www-data acdh-repo bash`
+(or run `./enter-repo.sh`)
 
 ### check initscript logs
 
@@ -45,7 +46,7 @@ for the following steps make sure you are in the `testing` directory (`cd testin
 #### docker setup
 
 * first create and enter a php/arche container by running `./enter_php_container.sh`
-* now you should be inside the container and the current working directory should be mounted into `data`, so if you change directory in data (`cd data`) and type `ls` you should see the files from the host `testing` folder
+* you are now in the mounted `testing` directory (which inside the docker is called `data`); if you look around (`ls`) you should see the same files as in the host`s testing repo.
 * run `./metadata_ingest.sh`
 
 #### composer setup
