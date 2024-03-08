@@ -39,14 +39,8 @@ you should mainly focus on ARCHEs API, but you can find the ARCHE-GUI at http://
 * or user docker
 
 ## how to test
-
-* change into `testing` folder `cd testing` 
-
+for the following steps make sure you are in the `testing` directory (`cd testing`)
 ### ingest metadata
-
-#### composer setup
-* run `./metadata_ingest.sh` to ingest the ["Die eierlegende Wollmilchsau"](https://github.com/acdh-oeaw/arche-ingest/blob/master/sample.ttl)
-* see [arche-ingest](https://github.com/acdh-oeaw/arche-ingest) for some documentation
 
 #### docker setup
 
@@ -54,12 +48,31 @@ you should mainly focus on ARCHEs API, but you can find the ARCHE-GUI at http://
 * now you should be inside the container and the current working directory should be mounted into `data`, so if you change directory in data (`cd data`) and type `ls` you should see the files from the host `testing` folder
 * run `./metadata_ingest.sh`
 
+#### composer setup
+* run `./metadata_ingest.sh` to ingest the ["Die eierlegende Wollmilchsau"](https://github.com/acdh-oeaw/arche-ingest/blob/master/sample.ttl)
+* see [arche-ingest](https://github.com/acdh-oeaw/arche-ingest) for some documentation
+
+
 ### run filechecker
+#### docker setup
+* first create and enter a php/arche container by running `./enter_php_container.sh`
+* now you should be inside the container and the current working directory should be mounted into `data`, so if you change directory in data (`cd data`) and type `ls` you should see the files from the host `testing` folder
+* run `./filechecker.sh`
+* check the results in `testing/fc_out/{datetime-of-last-run}` (e.g. cd into the directory, start python dev server `python -m http.server` and open the printed URL)
+* spoileralert: 2/3 files did not pass the test!
+
+#### composer setup
  * run `./filechecker.sh`
  * check the results in `testing/fc_out/{datetime-of-last-run}` (e.g. cd into the directory, start python dev server `python -m http.server` and open the printed URL)
  * spoileralert: 2/3 files did not pass the test!
 
 ### ingest binaries
+#### docker setup
+* first create and enter a php/arche container by running `./enter_php_container.sh`
+* now you should be inside the container and the current working directory should be mounted into `data`, so if you change directory in data (`cd data`) and type `ls` you should see the files from the host `testing` folder
+* run `./binaries_import.sh`
+
+#### composer setup
 * (well you actually shouldn't do that, because they didn't pass the filechecker)
 * run `./binaries_import.sh`
 * see [repo-file-checker](https://github.com/acdh-oeaw/repo-file-checker) for some documentation
