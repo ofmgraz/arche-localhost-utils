@@ -80,8 +80,10 @@ for the following steps make sure you are in the `testing` directory (`cd testin
 
 ## add new dump
 
+* remove everything and clone the repo again
+* comment `# cp dump.sql -d ${VOLUMES_DIR}/data` in `init-repo.sh`
 * enter container `./enter-repo.sh`
 * change user `su www-data`
-* create dump `pg_dump -f data/dump.sql`
+* create dump `pg_dumpall -f data/dump.sql`
 * leave container
 * copy data.sql into repo root
