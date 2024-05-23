@@ -78,3 +78,10 @@ for the following steps make sure you are in the `testing` directory (`cd testin
 * run `./binaries_import.sh`
 * see [repo-file-checker](https://github.com/acdh-oeaw/repo-file-checker) for some documentation
 
+## add new dump
+
+* enter container `./enter-repo.sh`
+* change user `su www-data`
+* create dump `pg_dump -f data/dump.sql`
+* leave container
+* copy data.sql into repo root

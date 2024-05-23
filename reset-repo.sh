@@ -7,7 +7,7 @@ for i in data tmp postgresql log vendor gui; do
     rm -rf "$VOLUMES_DIR/$i"
     mkdir "$VOLUMES_DIR/$i"
 done
-unzip dump.zip -d ${VOLUMES_DIR}/data
+cp dump.sql -d ${VOLUMES_DIR}/data
 rm -fr "$VOLUMES_DIR/config"
 git clone https://github.com/acdh-oeaw/arche-docker-config.git -b arche "$VOLUMES_DIR/config"
 cp custom_config/users.yaml "$VOLUMES_DIR/config/initScripts/users.yaml"
