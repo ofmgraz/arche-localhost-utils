@@ -1,16 +1,12 @@
 name: Upload metadata
 
-on: 
+on:
   workflow_dispatch:
 
 jobs:
   upload_metadata:
     name: Upload metadata to ARCHE
     runs-on: ubuntu-latest
-    permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the
-      # # added or changed files to the repository.
-      contents: write
     env:
       ARCHE_LOGIN: ${{ secrets.BASEROW_USER }}
       ARCHE_PW: ${{ secrets.BASEROW_PW }}
