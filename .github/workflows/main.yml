@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_pages:
+  upload_metadata:
     name: Upload metadata to ARCHE
     runs-on: ubuntu-latest
     permissions:
