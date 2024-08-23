@@ -8,8 +8,8 @@ jobs:
     name: Upload metadata to ARCHE
     runs-on: ubuntu-latest
     env:
-      ARCHE_LOGIN: ${{ secrets.BASEROW_USER }}
-      ARCHE_PW: ${{ secrets.BASEROW_PW }}
+      ARCHE_LOGIN: ${{ secrets.ARCHE_USER }}
+      ARCHE_PW: ${{ secrets.ARCHE_PW }}
     steps:
       - name: Perform Checkout
         uses: actions/checkout@v4
