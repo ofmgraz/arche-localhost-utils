@@ -1,0 +1,28 @@
+name: Upload metadata
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build_pages:
+    name: Upload metadata to ARCHE
+    runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # # added or changed files to the repository.
+      contents: write
+    env:
+      ARCHE_LOGIN: ${{ secrets.BASEROW_USER }}
+      ARCHE_PW: ${{ secrets.BASEROW_PW }}
+    steps:
+      - name: Perform Checkout
+        uses: actions/checkout@v4
+      - name: ingestion dependencies
+        run: |
+          composer require "acdh-oeaw/arche-ingest:^1"
+      - name: ingest resources
+        run: |
+          vendor/bin/arche-import-metadata ofmgraz.ttl https://arche-dev.acdh-dev.oeaw.ac.at/api ${{secrets.ARCHE_LOGIN}} ${{secrets.ARCHE_PW}}--retriesOnConflict 25
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: Metadata uploaded
