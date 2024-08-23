@@ -13,6 +13,8 @@ jobs:
       - name: ingestion dependencies
         run: |
           composer require "acdh-oeaw/arche-ingest:^1"
+      - name: Fetch metadata
+        run: ./fetch_data.sh
       - name: ingest resources
         run: |
           vendor/bin/arche-import-metadata ofmgraz.ttl https://arche-dev.acdh-dev.oeaw.ac.at/api ${{secrets.ARCHE_LOGIN}} ${{secrets.ARCHE_PW}}--retriesOnConflict 25
